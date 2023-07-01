@@ -468,3 +468,71 @@ footer a:hover {
     width: 100%;
   }
 }
+
+/* About Me section styles */
+#about {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+  color: #000;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.hobby {
+  flex-basis: 300px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.hobby:hover {
+  transform: scale(1.05);
+}
+
+.hobby img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hobby-description {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hobby {
+    flex-basis: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hobby {
+    flex-basis: 100%;
+  }
+}
+
+.hobbies1{
+  padding-top: 50px;
+  font-size: 2rem;
+  font-family: cursive;
+}
