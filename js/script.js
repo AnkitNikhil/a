@@ -1,8 +1,8 @@
 // Add your custom JavaScript code here
 
 // Smooth scrolling
-$(document).ready(function() {
-  $('a[href^="#"]').on('click', function(event) {
+$(document).ready(function () {
+  $('a[href^="#"]').on('click', function (event) {
     var target = $(this.getAttribute('href'));
     if (target.length) {
       event.preventDefault();
@@ -14,8 +14,8 @@ $(document).ready(function() {
 });
 
 // Form submission
-$(document).ready(function() {
-  $('#contact-form').on('submit', function(event) {
+$(document).ready(function () {
+  $('#contact-form').on('submit', function (event) {
     event.preventDefault();
 
     // Perform form validation here
@@ -137,9 +137,9 @@ particlesJS('particles-js', {
 });
 
 // Animate sections on scroll
-$(document).ready(function() {
-  $(window).scroll(function() {
-    $('.fade-in').each(function() {
+$(document).ready(function () {
+  $(window).scroll(function () {
+    $('.fade-in').each(function () {
       var elementPos = $(this).offset().top;
       var topOfWindow = $(window).scrollTop() + $(window).height();
       if (elementPos < topOfWindow) {
@@ -149,8 +149,8 @@ $(document).ready(function() {
   });
 });
 // Form submission
-$(document).ready(function() {
-  $('#contact-form').on('submit', function(event) {
+$(document).ready(function () {
+  $('#contact-form').on('submit', function (event) {
     event.preventDefault();
 
     // Perform form validation
@@ -193,7 +193,7 @@ $(document).ready(function() {
 
     if (isValid) {
       // Simulate form submission
-      setTimeout(function() {
+      setTimeout(function () {
         $('#contact-form')[0].reset();
         $('#success-message').text('Your message has been sent successfully!');
       }, 1000);
@@ -210,25 +210,25 @@ $(document).ready(function() {
 window.addEventListener('scroll', animateAboutSection);
 
 function animateAboutSection() {
-    const aboutContainer = document.querySelector('.about-container');
-    const aboutContainerPosition = aboutContainer.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / 1.3;
+  const aboutContainer = document.querySelector('.about-container');
+  const aboutContainerPosition = aboutContainer.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.3;
 
-    if (aboutContainerPosition < screenPosition) {
-        aboutContainer.classList.add('show');
-    }
+  if (aboutContainerPosition < screenPosition) {
+    aboutContainer.classList.add('show');
+  }
 }
 // JavaScript
 const aboutSection = document.querySelector('#about');
 
 function fadeInAboutContent() {
-    const aboutContent = document.querySelector('.about-content');
-    const rect = aboutContent.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
+  const aboutContent = document.querySelector('.about-content');
+  const rect = aboutContent.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
 
-    if (rect.top <= windowHeight * 0.8) {
-        aboutContent.classList.add('fade-in');
-    }
+  if (rect.top <= windowHeight * 0.8) {
+    aboutContent.classList.add('fade-in');
+  }
 }
 
 window.addEventListener('scroll', fadeInAboutContent);
