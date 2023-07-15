@@ -233,3 +233,11 @@ function fadeInAboutContent() {
 
 window.addEventListener('scroll', fadeInAboutContent);
 window.addEventListener('load', fadeInAboutContent);
+
+// Add "animated" class to each letter of the text
+document.addEventListener("DOMContentLoaded", function() {
+  var letters = document.querySelectorAll(".navbar-brand .animated-text");
+  letters.forEach(function(letter) {
+    letter.innerHTML = letter.textContent.replace(/\S/g, "<span class='animated-letter'>$&</span>");
+  });
+});
