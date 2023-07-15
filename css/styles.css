@@ -305,20 +305,20 @@ footer a:hover {
 }
 /* ... Existing CSS code ... */
 
-/* About Me section styles */
-#about {
+/* hello section styles */
+#hello {
   background-color: #f8f8f8;
   padding: 80px 0;
   color: black; /* Set the text color to black */
 }
 
-#about h2 {
+#hello h2 {
   font-size: 36px;
   margin-bottom: 30px;
   color: black; /* Set the heading color to black */
 }
 
-#about p1 {
+#hello p1 {
   font-size: 18px;
   margin-bottom: 40px;
   color: black; /* Set the paragraph text color to black */
@@ -330,7 +330,7 @@ footer a:hover {
     overflow: hidden;
 }
 
-.about-container {
+.hello-container {
     position: relative;
     z-index: 1;
     background-color: #fff;
@@ -359,17 +359,17 @@ footer a:hover {
 }
 
 /* Animation */
-.about-container {
+.hello-container {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
-.about-container.show {
+.hello-container.show {
     opacity: 1;
     transform: translateY(0);
 }
-.about-container {
+.hello-container {
     background-color: #f8f8f8;
     border-radius: 10px;
     padding: 40px;
@@ -377,13 +377,13 @@ footer a:hover {
     text-align: center;
 }
 
-.about-content {
+.hello-content {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.about-content.fade-in {
+.hello-content.fade-in {
     opacity: 1;
     transform: translateY(0);
 }
@@ -469,15 +469,15 @@ footer a:hover {
   }
 }
 
-/* About Me section styles */
-#about {
+/* hello section styles */
+#hello {
   background-color: #f8f8f8;
   padding: 80px 0;
   color: #000;
   text-align: center;
 }
 
-#about h2 {
+#hello h2 {
   font-size: 36px;
   margin-bottom: 30px;
   color: #000;
@@ -518,6 +518,32 @@ footer a:hover {
   text-align: center;
 }
 
+
+/* About section styles */
+#about {
+  background-color: black; /* Update the background color to black */
+  color: white; /* Update the font color to white */
+  padding: 80px 0;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: white; /* Update the heading color to white */
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.about-container {
+  background-color: black; /* Update the container background color to black */
+  color: white; /* Update the container font color to white */
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .hobby {
@@ -535,4 +561,24 @@ footer a:hover {
   padding-top: 50px;
   font-size: 2rem;
   font-family: cursive;
+}
+
+@keyframes animateText {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+.navbar-brand .animated-text {
+  display: inline-block;
+  animation: animateText 2s infinite ease-in-out;
 }
