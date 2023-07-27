@@ -633,7 +633,7 @@ footer a:hover {
 
 /* Portfolio section styles */
 #portfolio {
-  background-color: #2D2727; /* Set your desired background color here */
+  background-color: #2D2727;
   padding: 80px 0;
   text-align: center;
 }
@@ -641,21 +641,18 @@ footer a:hover {
 #portfolio h2 {
   font-size: 36px;
   margin-bottom: 30px;
-  color: #ffffff; /* Set the text color for the heading */
+  color: #ffffff;
 }
 
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  justify-items: center;
   margin-top: 40px;
 }
 
 .project {
-  flex: 1 0 300px;
-  margin: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -664,7 +661,7 @@ footer a:hover {
 }
 
 .project img {
-  width: 100%;
+  width: 350px;
   height: 200px;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
@@ -675,7 +672,7 @@ footer a:hover {
   margin-top: 70px;
   font-size: 18px;
   font-weight: bold;
-  color: whitesmoke; /* Set the text color for the project title */
+  color: whitesmoke;
 }
 
 /* Animation for project image on hover */
@@ -683,3 +680,4 @@ footer a:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 8px 15px whitesmoke;
 }
+
