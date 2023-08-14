@@ -1,5 +1,5 @@
 // Add your custom JavaScript code here
-
+alert("Happy 77th Independence Day!");
 // Smooth scrolling
 $(document).ready(function () {
   $('a[href^="#"]').on('click', function (event) {
