@@ -167,7 +167,8 @@
             <div class="social-media">
                 <a title="instagram" href="https://www.instagram.com/theankitnikhil/?hl=en"><i title="instagram"
                         alt="instagram" class="fa-brands fa-instagram fa-xl" style="color: #c0116e;"></i></a>
-                <a title="X" href="https://twitter.com/ankit__nikhil"><i class="fa-solid fa-x fa-xl" style="color: #ffffff;"></i></a>
+                <a title="X" href="https://twitter.com/ankit__nikhil"><i class="fa-solid fa-x fa-xl"
+                        style="color: #ffffff;"></i></a>
                 <a title="youtube" href="https://www.youtube.com/@ankitnikhil4008"><i title="youtube" alt="youtube"
                         class="fa-brands fa-youtube fa-xl" style="color: #f90b0b;"></i></a>
                 <a title="github" href="https://github.com/AnkitNikhil"><i title="github" alt="github"
@@ -178,6 +179,51 @@
             </a>
         </div>
     </footer>
+    <!-- Footer Ends -->
+    <!-- scroll to top -->
+    <button id="back-to-top" title="Back to Top"><i class="fa fa-angle-up"></i></button>
+    <style>
+        /* "Back to Top" Button Styles */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: block;
+            background: #2D2727;
+            color: #fff !important;
+            border: none;
+            border-radius: 2px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
+        }
+
+        #back-to-top:hover {
+            background: #555;
+        }
+    </style>
+
+    <script>
+        // Show/hide "Back to Top" button
+        window.onscroll = function () {
+            var backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Smooth scrolling to the top when the button is clicked
+        document.getElementById("back-to-top").addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
