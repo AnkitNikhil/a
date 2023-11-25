@@ -344,3 +344,52 @@ $(document).ready(function () {
     return emailRegex.test(email);
   }
 });
+
+/******Bible Verse******/
+// Array of Bible verses
+const bibleVerses = [
+  "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope. - Jeremiah 29:11",
+  "The Lord is my shepherd; I shall not want. - Psalm 23:1",
+  // Add more verses as needed
+];
+
+// Function to get the current date
+function getCurrentDate() {
+  const today = new Date();
+  return today.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+}
+
+// Function to get the current time in milliseconds since midnight
+function getCurrentTime() {
+  const now = new Date();
+  const midnight = new Date(now);
+  midnight.setHours(0, 0, 0, 0);
+  return now - midnight;
+}
+
+// Function to set the daily Bible verse
+function setDailyVerse() {
+  const currentDate = getCurrentDate();
+  const verseIndex = currentDate.charCodeAt(currentDate.length - 1) % bibleVerses.length;
+  const dailyVerse = bibleVerses[verseIndex];
+
+  // Update the content of the #dailyVerse element
+  document.getElementById('dailyVerse').textContent = `${currentDate} - ${dailyVerse}`;
+}
+
+// Function to update the verse at midnight
+function updateVerseAtMidnight() {
+  const currentTime = getCurrentTime();
+  const timeUntilMidnight = 24 * 60 * 60 * 1000 - currentTime; // Time until midnight in milliseconds
+
+  setTimeout(function () {
+    setDailyVerse();
+    updateVerseAtMidnight(); // Set up the timer for the next midnight
+  }, timeUntilMidnight);
+}
+
+// Call the function to set the daily verse when the page loads
+setDailyVerse();
+
+// Call the function to update the verse at midnight
+updateVerseAtMidnight();
