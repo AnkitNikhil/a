@@ -1,8 +1,9 @@
 /* Add your custom styles here */
 
 body {
-  background-color: black;
+  font-family: 'Roboto', sans-serif;
   color: white;
+  background-color: rebeccapurple;
 }
 
 section {
@@ -16,9 +17,15 @@ section {
 }
 
 .header-image img {
-  max-width: 100%;
-  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease;
 }
+
+.header-image img:hover {
+  transform: scale(1.1); /* Zoom in a bit on hover */
+}
+
 h1 {
   font-size: 48px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
@@ -149,7 +156,7 @@ h1, p {
 }
 
 
-/* Add your custom styles here */
+
 
 /* ... Existing CSS code ... */
 
@@ -293,7 +300,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #ff5e3a;
+  color: goldenrod;
 }
 .profile-image {
   width: 200px;
@@ -633,15 +640,17 @@ footer a:hover {
 
 /* Portfolio section styles */
 #portfolio {
-  background-color: #2D2727;
+  background-color: #292929; /* Dark background for portfolio section */
   padding: 80px 0;
   text-align: center;
+  color: #ffffff;
 }
 
 #portfolio h2 {
   font-size: 36px;
   margin-bottom: 30px;
-  color: #ffffff;
+  color: snow;
+  animation: glow 2s infinite alternate;
 }
 
 .projects {
@@ -674,13 +683,12 @@ footer a:hover {
   margin-bottom: 10px; /* Add a bottom margin for spacing */
   font-size: 18px;
   font-weight: bold;
-  color: whitesmoke;
+  color: #ffffff; /* Text color */
 }
 
-/* Animation for project image on hover */
 .project:hover {
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 8px 15px whitesmoke;
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.4); /* Light shadow on hover */
 }
 
 /* Media queries for responsive design */
@@ -694,3 +702,12 @@ footer a:hover {
   }
 }
 
+/********Bible Verse*******/
+#dailyVerse {
+  font-size: 18px;
+  font-style: italic;
+  margin: 50px;
+  text-align: center;
+  color: snow;
+  animation: glow 2s infinite alternate;
+}
