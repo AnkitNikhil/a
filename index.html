@@ -18,59 +18,6 @@
 
 
 </head>
-
-<!-- Christmas style -->
-<style>
-    body {
-        background-color: transparent;
-    }
-
-    .snowflake {
-        position: fixed;
-        width: 10px;
-        height: 10px;
-        background-color: #fff;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        animation: snowfall 5s linear infinite;
-    }
-
-    @keyframes snowfall {
-        0% {
-            transform: translateY(-100%);
-        }
-
-        100% {
-            transform: translateY(100vh);
-        }
-    }
-</style>
-
-<body>
-    <script>
-        // Create snowflakes
-        function createSnowflakes() {
-            const numSnowflakes = 50;
-            const container = document.body;
-
-            for (let i = 0; i < numSnowflakes; i++) {
-                const snowflake = document.createElement("div");
-                snowflake.classList.add("snowflake");
-                snowflake.style.left = Math.random() * window.innerWidth + "px";
-                snowflake.style.animationDuration = Math.random() * 5 + 3 + "s";
-                container.appendChild(snowflake);
-            }
-        }
-
-        // Start the snowfall animation
-        createSnowflakes();
-
-        // Display Merry Christmas message
-        window.addEventListener("load", function () {
-            alert("Merry Christmas! Enjoy your holidays!");
-        });
-    </script>
 </body>
 
 <body>
