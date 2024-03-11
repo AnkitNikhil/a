@@ -1,9 +1,8 @@
-/* Add your custom styles here */
- 
+
 body {
   font-family: 'Roboto', sans-serif;
   color: white;
-  background-color: olivedrab;
+  
 }
 
 section {
@@ -300,7 +299,7 @@ footer a {
 }
 
 footer a:hover {
-  color: goldenrod;
+  color: ivory;
 }
 .profile-image {
   width: 200px;
@@ -705,9 +704,9 @@ footer a:hover {
 /********Bible Verse*******/
 #dailyVerse {
   font-size: 18px;
-  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 50px;
   text-align: center;
-  color: snow;
+  color:black;
   animation: glow 2s infinite alternate;
 }
